@@ -1,5 +1,6 @@
 package br.com.bancodgital.api.user;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -35,6 +36,8 @@ public class Usuario {
 	
 	@NotNull(message = "A data de nascimento é obrigatória")
 	private LocalDate dataNascimento;
+	
+	private BigDecimal saldo;
 
 	public Long getId() {
 		return id;
@@ -99,6 +102,14 @@ public class Usuario {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public BigDecimal getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(BigDecimal saldo) {
+		this.saldo = saldo;
 	}
 	
 }
